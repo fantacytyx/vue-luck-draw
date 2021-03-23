@@ -1,18 +1,45 @@
 {
   "name": "vue-luck-draw",
-  "version": "3.1.1",
-  "description": "",
+  "version": "3.4.5",
+  "description": "一个支持 vue2 / vue3 的（大转盘抽奖 / 九宫格抽奖）luckydraw 插件",
   "main": "index.js",
-  "scripts": {
-    "docs": "vuepress dev ./",
-    "build:docs": "vuepress build ./ --dest ./docs/",
-    "package": "vue-cli-service build --target lib --name index --dest ./src/components/vue-luck-draw/dist/ ./src/components/vue-luck-draw/src/index.js"
-  },
-  "keywords": ["vue抽奖", "大转盘抽奖", "九宫格抽奖", "抽奖插件", "web抽奖", "移动端抽奖", "canvas抽奖"],
+  "keywords": [
+    "vue3抽奖",
+    "大转盘抽奖",
+    "九宫格抽奖",
+    "抽奖插件",
+    "web抽奖",
+    "移动端抽奖",
+    "canvas抽奖"
+  ],
   "author": "ldq <17778888138@189.cn>",
-  "license": "ISC",
-  "devDependencies": {
-    "vuepress": "^1.5.4"
+  "license": "BSD-3-Clause",
+  "files": [
+    "package.json",
+    "dist",
+    "vue3",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config=build/webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack serve --config=build/webpack.config.js"
   },
-  "files": ["package.json", "dist", "index.js"]
+  "homepage": "https://100px.net",
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "lucky-canvas": "^1.5.3",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.3.9",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.27.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
