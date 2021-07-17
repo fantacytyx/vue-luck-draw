@@ -37,7 +37,7 @@
   },
   "homepage": "https://100px.net",
   "dependencies": {
-    "lucky-canvas": "^1.5.3"
+    "lucky-canvas": "https://github.com/fantacytyx/lucky-canvas#1fdfe6e0d87cb28c39ba39a93cda901cce00ed05"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.7",
