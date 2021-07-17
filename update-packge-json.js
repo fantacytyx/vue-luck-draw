@@ -1,19 +1,19 @@
 const fs = require('fs')
 const path = require('path')
-const rimraf = require('rimraf')
+// const rimraf = require('rimraf')
 const args = process.argv.splice(2)
 const packgeJsonVersion = args[0]
 
 main()
 
 function main () {
-  rimraf('./node_modules', function (err) { // 删除当前目录下的 aaa
-    if (err){
-      console.log(err)
-      return false
-    }
+  // rimraf('./node_modules', function (err) { // 删除当前目录下的 aaa
+  //   if (err){
+  //     console.log(err)
+  //     return false
+  //   }
     updatePackgeJsonFile()
-  })
+  // })
 }
 
 function updatePackgeJsonFile () {
